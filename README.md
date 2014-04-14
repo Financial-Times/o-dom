@@ -1,8 +1,6 @@
 # o-dom [![Build Status](https://travis-ci.org/Financial-Times/o-dom.png?branch=master)](https://travis-ci.org/Financial-Times/o-dom)
 
-___
 Origami DOM manipulation &amp; traversal helpers.
-___
 
 
 ## Functions
@@ -23,3 +21,12 @@ Example:
 var dom = require('o-dom');
 var closestListItem = dom.getClosestMatch(document.querySelector('li a'), 'li');
 ```
+
+## Development
+
+This module is suitable for helper functions that provide a convenient means of performing commonly required generic manipulation or selection of DOM elements.  It should not be extended to contain:
+
+* Selector functions where `querySelector` would suffice
+* Anything event related
+* Polyfills (use browserFeatures in origami.json for that)
+* Anything that is has a good chance of being specific to a single component use case
