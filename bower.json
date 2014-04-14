@@ -1,0 +1,10 @@
+{
+    "name": "o-dom",
+    "main": [
+        "main.js"
+    ],
+    "ignore": [
+        ".gitignore",
+        "test"
+    ]
+}
