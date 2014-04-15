@@ -1,3 +1,5 @@
+/*global require,describe,beforeEach,afterEach,it,expect*/
+
 require('./helpers/polyfills');
 
 var sandbox = require('./helpers/sandbox'),
@@ -8,6 +10,7 @@ var sandbox = require('./helpers/sandbox'),
     node4;
 
 describe("getClosestMatch()", function() {
+    "use strict";
 
     beforeEach(function(){
         sandbox.init();

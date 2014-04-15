@@ -14,6 +14,9 @@ __Arguments__
 * `el` < DOMElement > The DOM element to start from.
 * `selector` < String > The CSS selector to match.
 
+__Returns__
+
+< DOMElement > or `false`
 
 Example:
 
@@ -21,6 +24,30 @@ Example:
 var dom = require('o-dom');
 var closestListItem = dom.getClosestMatch(document.querySelector('li a'), 'li');
 ```
+
+### getIndex
+
+Get the index of an element.
+
+__Arguments__
+
+* `el` < DOMElement > The DOM element whose index to get.
+
+__Returns__
+
+< Number >
+
+Example, assuming this HTML structure:
+
+```html
+<ul>
+    <li></li>
+    <li id="target"></li>
+    <li></li>
+</ul>
+```
+
+`dom.getIndex(document.getElementById('target'));` would return 1.
 
 ## Development
 
