@@ -1,7 +1,7 @@
-// Karma configuration
-// Generated on Mon Apr 14 2014 12:27:18 GMT+0100 (BST)
+/*global module*/
 
 module.exports = function(config) {
+  "use strict";
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -61,6 +61,10 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
+    singleRun: true,
+
+    browserify: {
+        transform: ['debowerify']
+    }
   });
 };

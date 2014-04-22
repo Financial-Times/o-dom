@@ -1,7 +1,5 @@
 /*global require,describe,beforeEach,afterEach,it,expect*/
 
-require('./helpers/polyfills');
-
 var sandbox = require('./helpers/sandbox'),
     dom = require('./../main'),
     node1,

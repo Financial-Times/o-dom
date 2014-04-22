@@ -1,13 +1,16 @@
 {
-    "name": "o-dom",
-    "main": [
-        "main.js"
-    ],
-    "ignore": [
-        ".gitignore",
-        ".travis.yml",
-        "karma.conf.js",
-        "package.json",
-        "test"
-    ]
+  "name": "o-dom",
+  "main": [
+    "main.js"
+  ],
+  "ignore": [
+    ".gitignore",
+    ".travis.yml",
+    "karma.conf.js",
+    "package.json",
+    "test"
+  ],
+  "dependencies": {
+    "o-useragent": "~0.5.0"
+  }
 }

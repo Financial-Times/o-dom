@@ -1,9 +1,12 @@
-/*global exports*/
+/*global require, exports*/
+
+var oUseragent = require('o-useragent'),
+    matchesMethod = oUseragent.prefixer.dom(Element.prototype, 'matches') || oUseragent.prefixer.dom(Element.prototype, 'matchesSelector');
 
 function getClosestMatch(el, selector) {
     "use strict";
     while (el) {
-        if (el.matches(selector)) {
+        if (el[matchesMethod](selector)) {
             return el;
         } else {
             el = el.parentElement;
