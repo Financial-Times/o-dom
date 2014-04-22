@@ -1,6 +1,5 @@
 {
   "devDependencies": {
-    "phantomjs": "^1.9.7-3",
     "browserify": "^3.41.0",
     "karma": "^0.12.6",
     "karma-jasmine": "^0.1.5",
