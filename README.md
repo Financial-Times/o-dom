@@ -5,6 +5,19 @@ Origami DOM manipulation &amp; traversal helpers.
 
 ## Functions
 
+### matches
+
+Determines if an element matches a given css selector
+
+__Arguments__
+
+* `el` < DOMElement > The DOM element to check.
+* `selector` < String > The CSS selector to match.
+
+__Returns__
+
+`true` or `false`
+
 ### getClosestMatch
 
 Get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.
