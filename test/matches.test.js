@@ -25,7 +25,7 @@ describe("matches()", function() {
     });
 
     it("is passed no selector", function() {
-        expect(function () { dom.matches(node1, null) }).toThrow();
+        expect(dom.matches(node1, null)).toEqual(false);
     });
 
     it("finds no match", function() {
