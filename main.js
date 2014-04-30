@@ -1,12 +1,17 @@
 /*global require, exports*/
+'use strict';
 
-var oUseragent = require('o-useragent'),
-    matchesMethod = oUseragent.prefixer.dom(Element.prototype, 'matches') || oUseragent.prefixer.dom(Element.prototype, 'matchesSelector');
+var prefixer = require('o-useragent').prefixer,
+    matchesMethod = prefixer.dom(Element.prototype, 'matches') || prefixer.dom(Element.prototype, 'matchesSelector');
 
-function getClosestMatch(el, selector) {
-    "use strict";
+function matches (el, selector) {
+    return el[matchesMethod](selector);
+}
+
+function getClosestMatch (el, selector) {
+
     while (el) {
-        if (el[matchesMethod](selector)) {
+        if (matches(el, selector)) {
             return el;
         } else {
             el = el.parentElement;
@@ -15,8 +20,8 @@ function getClosestMatch(el, selector) {
     return false;
 }
 
-function getIndex(el) {
-    "use strict";
+function getIndex (el) {
+
     var i = 0;
     if (el && typeof el === 'object' && el.nodeType === 1) {
         while (el.previousSibling) {
@@ -31,3 +36,4 @@ function getIndex(el) {
 
 exports.getClosestMatch = getClosestMatch;
 exports.getIndex = getIndex;
+exports.matches = matches;
