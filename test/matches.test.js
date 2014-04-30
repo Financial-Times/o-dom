@@ -34,14 +34,14 @@ describe("matches()", function() {
     });
 
     it("matches variety of selectors", function() {
-        expect(dom.matches(node1, 'div')).toEqual(false);
-        expect(dom.matches(node1, '#node1')).toEqual(false);
-        expect(dom.matches(node1, '.myClass')).toEqual(false);
-        expect(dom.matches(node1, '.myClass.anotherClass')).toEqual(false);
-        expect(dom.matches(node1, '[data-myattribute]')).toEqual(false);
-        expect(dom.matches(node1, '[data-myattribute=myValue]')).toEqual(false);
-        expect(dom.matches(node1, '#node1[data-myattribute]')).toEqual(false);
-        expect(dom.matches(node1, '#node1.myClass')).toEqual(false);
-        expect(dom.matches(node1, '.myClass[data-myattribute]')).toEqual(false);
+        expect(dom.matches(node1, 'div')).toEqual(true);
+        expect(dom.matches(node1, '#node1')).toEqual(true);
+        expect(dom.matches(node1, '.myClass')).toEqual(true);
+        expect(dom.matches(node1, '.myClass.anotherClass')).toEqual(true);
+        expect(dom.matches(node1, '[data-myattribute]')).toEqual(true);
+        expect(dom.matches(node1, '[data-myattribute=myValue]')).toEqual(true);
+        expect(dom.matches(node1, '#node1[data-myattribute]')).toEqual(true);
+        expect(dom.matches(node1, '#node1.myClass')).toEqual(true);
+        expect(dom.matches(node1, '.myClass[data-myattribute]')).toEqual(true);
     });
 });
