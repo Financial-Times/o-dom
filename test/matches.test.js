@@ -21,11 +21,11 @@ describe("matches()", function() {
     });
 
     it("is passed no element", function() {
-        expect(dom.matches(null, null)).toThrow();
+        expect(function () { dom.matches(null, null) }).toThrow();
     });
 
     it("is passed no selector", function() {
-        expect(dom.matches(node1, null)).toThrow();
+        expect(function () { dom.matches(node1, null) }).toThrow();
     });
 
     it("finds no match", function() {
