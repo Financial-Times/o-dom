@@ -34,6 +34,28 @@ function getIndex (el) {
     }
 }
 
+
+function attrToData (name) {
+    return name.replace(/^data\-/, '').replace(/\-\w/g, function ($0) {
+        return $0.charAt(1).toUpperCase();
+    });
+}
+
+function dataset (el) {
+    if (el.dataset) return el.dataset;
+    
+    var data = {};
+
+    Array.prototype.forEach.call(el.attributes, function (attr) {
+        if (attr.name.indexOf('data-') === 0) {
+            data[attrToData(attr.name)] = attr.value; // need to do some type-coercion here
+        }
+    });
+
+    return data;
+}
+
 exports.getClosestMatch = getClosestMatch;
 exports.getIndex = getIndex;
 exports.matches = matches;
+exports.dataset = dataset;
