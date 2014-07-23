@@ -15,12 +15,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'http://polyfill.webservices.ft.com/v1/polyfill.min.js?features=Element.prototype.matches|always',
       'test/*.test.js'
-    ],
-
-
-    // list of files to exclude
-    exclude: [
     ],
 
 
