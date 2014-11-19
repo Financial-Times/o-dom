@@ -1,27 +1,26 @@
 /*global exports*/
+'use strict';
 
 var sandboxEl;
 
 function init() {
-    "use strict";
-    if (document.querySelector('.sandbox')) {
-        sandboxEl = document.querySelector('.sandbox');
-    } else {
-        sandboxEl = document.createElement('div');
-        sandboxEl.classList.add('sandbox');
-        document.body.appendChild(sandboxEl);
-    }
+	if (document.querySelector('.sandbox')) {
+		sandboxEl = document.querySelector('.sandbox');
+	} else {
+		sandboxEl = document.createElement('div');
+		sandboxEl.classList.add('sandbox');
+		document.body.appendChild(sandboxEl);
+	}
 }
 
 function reset() {
-    "use strict";
-    while (sandboxEl.firstChild) {
-        sandboxEl.removeChild(sandboxEl.firstChild);
-    }
+	while (sandboxEl.firstChild) {
+		sandboxEl.removeChild(sandboxEl.firstChild);
+	}
 }
 
 function setContents(html) {
-    sandboxEl.innerHTML = html;
+	sandboxEl.innerHTML = html;
 }
 
 exports.init = init;
