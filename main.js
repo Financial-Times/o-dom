@@ -1,7 +1,7 @@
 /*global exports*/
 'use strict';
 
-function getClosestMatch (el, selector) {
+function getClosestMatch(el, selector) {
 	while (el) {
 		if (el.matches(selector)) {
 			return el;
@@ -12,7 +12,7 @@ function getClosestMatch (el, selector) {
 	return false;
 }
 
-function getIndex (el) {
+function getIndex(el) {
 	var i = 0;
 	if (el && typeof el === 'object' && el.nodeType === 1) {
 		while (el.previousSibling) {

@@ -1,12 +1,12 @@
 /*global require,describe,beforeEach,afterEach,it,expect*/
 'use strict';
 
-var sandbox = require('./helpers/sandbox'),
-	dom = require('./../main'),
-	node1,
-	node2,
-	node3,
-	node4;
+var sandbox = require('./helpers/sandbox');
+var dom = require('./../main');
+var node1;
+var node2;
+var node3;
+var node4;
 
 describe("getClosestMatch()", function() {
 
