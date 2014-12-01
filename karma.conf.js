@@ -15,7 +15,7 @@ module.exports = function(config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-			'http://polyfill.webservices.ft.com/v1/polyfill.min.js?features=Element.prototype.matches|always',
+			'http://polyfill.webservices.ft.com/v1/polyfill.js?ua=safari/4',
 			'test/*.test.js'
 		],
 
