@@ -1,15 +1,15 @@
 {
-    "description": "DOM manipulation and traversal helpers",
-    "origamiType": "module",
-    "origamiVersion": 1,
-    "support": "https://github.com/Financial-Times/o-dom/issues",
-    "supportStatus": "active",
-    "browserFeatures": {
-        "required": [
-            "matches"
-        ]
-    },
-    "ci": {
-        "travis": "https://api.travis-ci.org/repos/Financial-Times/o-dom/builds.json"
-    }
+	"description": "DOM manipulation and traversal helpers",
+	"origamiType": "module",
+	"origamiVersion": 1,
+	"support": "https://github.com/Financial-Times/o-dom/issues",
+	"supportStatus": "active",
+	"browserFeatures": {
+		"required": [
+			"matches"
+		]
+	},
+	"ci": {
+		"travis": "https://api.travis-ci.org/repos/Financial-Times/o-dom/builds.json"
+	}
 }

@@ -41,9 +41,9 @@ Example, assuming this HTML structure:
 
 ```html
 <ul>
-    <li></li>
-    <li id="target"></li>
-    <li></li>
+	<li></li>
+	<li id="target"></li>
+	<li></li>
 </ul>
 ```
 
