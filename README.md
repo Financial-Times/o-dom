@@ -57,3 +57,9 @@ This module is suitable for helper functions that provide a convenient means of 
 * Anything event related
 * Polyfills (use browserFeatures in origami.json for that)
 * Anything that is has a good chance of being specific to a single component use case
+
+----
+
+## Licence
+
+This software is published by the Financial Times under the [MIT licence](http://opensource.org/licenses/MIT).
