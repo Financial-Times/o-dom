@@ -1,9 +1,7 @@
-/*global require,describe,beforeEach,afterEach,it,expect*/
+/*global describe,beforeEach,afterEach,it,expect*/
 
-"use strict";
-
-var sandbox = require('./helpers/sandbox'),
-	dom = require('./../main');
+const sandbox = require('./helpers/sandbox');
+const dom = require('./../main');
 
 describe("getIndex()", function() {
 
