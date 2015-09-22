@@ -1,5 +1,4 @@
 /*global exports*/
-'use strict';
 
 function getClosestMatch(el, selector) {
 	while (el) {
@@ -13,7 +12,7 @@ function getClosestMatch(el, selector) {
 }
 
 function getIndex(el) {
-	var i = 0;
+	let i = 0;
 	if (el && typeof el === 'object' && el.nodeType === 1) {
 		while (el.previousSibling) {
 			el = el.previousSibling;

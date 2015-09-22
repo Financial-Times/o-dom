@@ -1,7 +1,6 @@
 /*global exports*/
-'use strict';
 
-var sandboxEl;
+let sandboxEl;
 
 function init() {
 	if (document.querySelector('.sandbox')) {

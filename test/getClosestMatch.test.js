@@ -1,12 +1,10 @@
-/*global require,describe,beforeEach,afterEach,it,expect*/
-'use strict';
+/*global describe,beforeEach,afterEach,it,expect*/
 
-var sandbox = require('./helpers/sandbox');
-var dom = require('./../main');
-var node1;
-var node2;
-var node3;
-var node4;
+const sandbox = require('./helpers/sandbox');
+const dom = require('./../main');
+let node1;
+let node2;
+let node4;
 
 describe("getClosestMatch()", function() {
 
@@ -15,7 +13,6 @@ describe("getClosestMatch()", function() {
 		sandbox.setContents('<div id="node1" class="myClass anotherClass" data-myattribute="myValue"><ul id="node2" class="myList" role="tablist"><li id="node3"><a href="#" id="node4">Link 1</a></li></ul></div>');
 		node1 = document.getElementById('node1');
 		node2 = document.getElementById('node2');
-		node3 = document.getElementById('node3');
 		node4 = document.getElementById('node4');
 	});
 

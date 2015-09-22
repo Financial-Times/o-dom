@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "babelify": "^5.0.4",
     "browserify": "^3.41.0",
     "debowerify": "^0.7.1",
     "karma": "^0.12.28",
