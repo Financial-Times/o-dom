@@ -1,12 +1,16 @@
-/*global describe,beforeEach,afterEach,it,expect*/
+/* eslint-env mocha, sinon, proclaim */
+
+import proclaim from 'proclaim';
+import sinon from 'sinon/pkg/sinon';
 
 const sandbox = require('./helpers/sandbox');
 const dom = require('./../main');
-let node1;
-let node2;
-let node4;
 
 describe("getClosestMatch()", function() {
+
+	let node1;
+	let node2;
+	let node4;
 
 	beforeEach(function(){
 		sandbox.init();
@@ -21,77 +25,77 @@ describe("getClosestMatch()", function() {
 	});
 
 	it("is defined", function() {
-		expect(dom.getClosestMatch).toBeDefined();
+		proclaim.isDefined(dom.getClosestMatch);
 	});
 
 	it("is passed no element", function() {
-		expect(dom.getClosestMatch(null, null)).toEqual(false);
+		proclaim.isFalse(dom.getClosestMatch(null, null));
 	});
 
 	it("is passed no selector", function() {
-		expect(dom.getClosestMatch(node1, null)).toEqual(false);
+		proclaim.isFalse(dom.getClosestMatch(node1, null));
 	});
 
 	it("finds no match", function() {
-		expect(dom.getClosestMatch(node1, '.myNonExistentClass')).toEqual(false);
-		expect(dom.getClosestMatch(node1, '#nonExistentID')).toEqual(false);
+		proclaim.isFalse(dom.getClosestMatch(node1, '.myNonExistentClass'));
+		proclaim.isFalse(dom.getClosestMatch(node1, '#nonExistentID'));
 	});
 
 	it("passed element is closest - element", function() {
-		expect(dom.getClosestMatch(node1, 'div')).toEqual(node1);
-		expect(dom.getClosestMatch(node2, 'ul')).toEqual(node2);
+		proclaim.equal(dom.getClosestMatch(node1, 'div'), node1);
+		proclaim.equal(dom.getClosestMatch(node2, 'ul'), node2);
 	});
 
 	it("passed element is closest - id", function() {
-		expect(dom.getClosestMatch(node1, '#node1')).toEqual(node1);
+		proclaim.equal(dom.getClosestMatch(node1, '#node1'), node1);
 	});
 
 	it("passed element is closest - class", function() {
-		expect(dom.getClosestMatch(node1, '.myClass')).toEqual(node1);
-		expect(dom.getClosestMatch(node1, '.myClass.anotherClass')).toEqual(node1);
+		proclaim.equal(dom.getClosestMatch(node1, '.myClass'), node1);
+		proclaim.equal(dom.getClosestMatch(node1, '.myClass.anotherClass'), node1);
 	});
 
 	it("passed element is closest - attribute", function() {
-		expect(dom.getClosestMatch(node1, '[data-myattribute]')).toEqual(node1);
-		expect(dom.getClosestMatch(node1, '[data-myattribute=myValue]')).toEqual(node1);
+		proclaim.equal(dom.getClosestMatch(node1, '[data-myattribute]'), node1);
+		proclaim.equal(dom.getClosestMatch(node1, '[data-myattribute=myValue]'), node1);
 	});
 
 	it("passed element is closest - combination", function() {
-		expect(dom.getClosestMatch(node1, '#node1[data-myattribute]')).toEqual(node1);
-		expect(dom.getClosestMatch(node1, '#node1.myClass')).toEqual(node1);
-		expect(dom.getClosestMatch(node1, '.myClass[data-myattribute]')).toEqual(node1);
+		proclaim.equal(dom.getClosestMatch(node1, '#node1[data-myattribute]'), node1);
+		proclaim.equal(dom.getClosestMatch(node1, '#node1.myClass'), node1);
+		proclaim.equal(dom.getClosestMatch(node1, '.myClass[data-myattribute]'), node1);
 	});
 
 	it("parent element is closest - element", function() {
-		expect(dom.getClosestMatch(node2, 'div')).toEqual(node1);
+		proclaim.equal(dom.getClosestMatch(node2, 'div'), node1);
 	});
 
 	it("parent element is closest - id", function() {
-		expect(dom.getClosestMatch(node2, '#node1')).toEqual(node1);
+		proclaim.equal(dom.getClosestMatch(node2, '#node1'), node1);
 	});
 
 	it("parent element is closest - class", function() {
-		expect(dom.getClosestMatch(node2, '.myClass')).toEqual(node1);
+		proclaim.equal(dom.getClosestMatch(node2, '.myClass'), node1);
 	});
 
 	it("parent element is closest - attribute", function() {
-		expect(dom.getClosestMatch(node2, '[data-myattribute]')).toEqual(node1);
+		proclaim.equal(dom.getClosestMatch(node2, '[data-myattribute]'), node1);
 	});
 
 	it("ancestor element is closest - element", function() {
-		expect(dom.getClosestMatch(node4, 'ul')).toEqual(node2);
+		proclaim.equal(dom.getClosestMatch(node4, 'ul'), node2);
 	});
 
 	it("ancestor element is closest - id", function() {
-		expect(dom.getClosestMatch(node4, '#node2')).toEqual(node2);
+		proclaim.equal(dom.getClosestMatch(node4, '#node2'), node2);
 	});
 
 	it("ancestor element is closest - class", function() {
-		expect(dom.getClosestMatch(node4, '.myList')).toEqual(node2);
+		proclaim.equal(dom.getClosestMatch(node4, '.myList'), node2);
 	});
 
 	it("ancestor element is closest - attribute", function() {
-		expect(dom.getClosestMatch(node4, '[role]')).toEqual(node2);
+		proclaim.equal(dom.getClosestMatch(node4, '[role]'), node2);
 	});
 
 });

@@ -1,5 +1,9 @@
+.DS_Store
+.env
+/.sass-cache/
+/bower_components/
+/node_modules/
+/build/
 .idea/
-bower_components/
-build/
-node_modules/
-npm-debug.log
+/demos/local
+/coverage
