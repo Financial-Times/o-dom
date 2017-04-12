@@ -42,60 +42,60 @@ describe("getClosestMatch()", function() {
 	});
 
 	it("passed element is closest - element", function() {
-		proclaim.equal(dom.getClosestMatch(node1, 'div'), node1);
-		proclaim.equal(dom.getClosestMatch(node2, 'ul'), node2);
+		proclaim.deepEqual(dom.getClosestMatch(node1, 'div'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node2, 'ul'), node2);
 	});
 
 	it("passed element is closest - id", function() {
-		proclaim.equal(dom.getClosestMatch(node1, '#node1'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node1, '#node1'), node1);
 	});
 
 	it("passed element is closest - class", function() {
-		proclaim.equal(dom.getClosestMatch(node1, '.myClass'), node1);
-		proclaim.equal(dom.getClosestMatch(node1, '.myClass.anotherClass'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node1, '.myClass'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node1, '.myClass.anotherClass'), node1);
 	});
 
 	it("passed element is closest - attribute", function() {
-		proclaim.equal(dom.getClosestMatch(node1, '[data-myattribute]'), node1);
-		proclaim.equal(dom.getClosestMatch(node1, '[data-myattribute=myValue]'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node1, '[data-myattribute]'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node1, '[data-myattribute=myValue]'), node1);
 	});
 
 	it("passed element is closest - combination", function() {
-		proclaim.equal(dom.getClosestMatch(node1, '#node1[data-myattribute]'), node1);
-		proclaim.equal(dom.getClosestMatch(node1, '#node1.myClass'), node1);
-		proclaim.equal(dom.getClosestMatch(node1, '.myClass[data-myattribute]'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node1, '#node1[data-myattribute]'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node1, '#node1.myClass'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node1, '.myClass[data-myattribute]'), node1);
 	});
 
 	it("parent element is closest - element", function() {
-		proclaim.equal(dom.getClosestMatch(node2, 'div'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node2, 'div'), node1);
 	});
 
 	it("parent element is closest - id", function() {
-		proclaim.equal(dom.getClosestMatch(node2, '#node1'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node2, '#node1'), node1);
 	});
 
 	it("parent element is closest - class", function() {
-		proclaim.equal(dom.getClosestMatch(node2, '.myClass'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node2, '.myClass'), node1);
 	});
 
 	it("parent element is closest - attribute", function() {
-		proclaim.equal(dom.getClosestMatch(node2, '[data-myattribute]'), node1);
+		proclaim.deepEqual(dom.getClosestMatch(node2, '[data-myattribute]'), node1);
 	});
 
 	it("ancestor element is closest - element", function() {
-		proclaim.equal(dom.getClosestMatch(node4, 'ul'), node2);
+		proclaim.deepEqual(dom.getClosestMatch(node4, 'ul'), node2);
 	});
 
 	it("ancestor element is closest - id", function() {
-		proclaim.equal(dom.getClosestMatch(node4, '#node2'), node2);
+		proclaim.deepEqual(dom.getClosestMatch(node4, '#node2'), node2);
 	});
 
 	it("ancestor element is closest - class", function() {
-		proclaim.equal(dom.getClosestMatch(node4, '.myList'), node2);
+		proclaim.deepEqual(dom.getClosestMatch(node4, '.myList'), node2);
 	});
 
 	it("ancestor element is closest - attribute", function() {
-		proclaim.equal(dom.getClosestMatch(node4, '[role]'), node2);
+		proclaim.deepEqual(dom.getClosestMatch(node4, '[role]'), node2);
 	});
 
 });

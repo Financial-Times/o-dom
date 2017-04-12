@@ -31,5 +31,4 @@ describe("getIndex()", function() {
 		proclaim.equal(dom.getIndex(document.getElementById('node3')), 2);
 		proclaim.equal(dom.getIndex(document.getElementById('node4')), 3);
 	});
-
 });
