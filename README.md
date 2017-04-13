@@ -2,10 +2,17 @@
 
 Origami DOM manipulation &amp; traversal helpers.
 
+- [Usage](#usage)
+	- [JavaScript](#javascript)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [Licence](#licence)
 
-## Functions
+## Usage
 
-### getClosestMatch
+### JavaScript
+
+#### getClosestMatch
 
 Get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.
 
@@ -25,7 +32,7 @@ var dom = require('o-dom');
 var closestListItem = dom.getClosestMatch(document.querySelector('li a'), 'li');
 ```
 
-### getIndex
+#### getIndex
 
 Get the index of an element.
 
@@ -49,7 +56,7 @@ Example, assuming this HTML structure:
 
 `dom.getIndex(document.getElementById('target'));` would return 1.
 
-## Development
+## Contributing
 
 This module is suitable for helper functions that provide a convenient means of performing commonly required generic manipulation or selection of DOM elements.  It should not be extended to contain:
 
@@ -57,6 +64,13 @@ This module is suitable for helper functions that provide a convenient means of 
 * Anything event related
 * Polyfills (use browserFeatures in origami.json for that)
 * Anything that is has a good chance of being specific to a single component use case
+
+
+---
+
+## Contact
+
+If you have any questions or comments about this component, or need help using it, please either [raise an issue](https://github.com/Financial-Times/o-dom/issues), visit [#ft-origami](https://financialtimes.slack.com/messages/ft-origami/) or email [Origami Support](mailto:origami-support@ft.com).
 
 ----
 

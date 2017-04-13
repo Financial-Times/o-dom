@@ -1,4 +1,6 @@
-/*global describe,beforeEach,afterEach,it,expect*/
+/* eslint-env mocha, proclaim */
+
+import proclaim from 'proclaim';
 
 const sandbox = require('./helpers/sandbox');
 const dom = require('./../main');
@@ -15,18 +17,17 @@ describe("getIndex()", function() {
 	});
 
 	it("is defined", function() {
-		expect(dom.getIndex).toBeDefined();
+		proclaim.isDefined(dom.getIndex);
 	});
 
 	it("is passed no element", function() {
-		expect(dom.getIndex()).toEqual(undefined);
+		proclaim.isUndefined(dom.getIndex());
 	});
 
 	it("gets correct index", function() {
-		expect(dom.getIndex(document.getElementById('node1'))).toEqual(0);
-		expect(dom.getIndex(document.getElementById('node2'))).toEqual(1);
-		expect(dom.getIndex(document.getElementById('node3'))).toEqual(2);
-		expect(dom.getIndex(document.getElementById('node4'))).toEqual(3);
+		proclaim.equal(dom.getIndex(document.getElementById('node1')), 0);
+		proclaim.equal(dom.getIndex(document.getElementById('node2')), 1);
+		proclaim.equal(dom.getIndex(document.getElementById('node3')), 2);
+		proclaim.equal(dom.getIndex(document.getElementById('node4')), 3);
 	});
-
 });
