@@ -2,6 +2,7 @@
 
 function getClosestMatch(el, selector) {
 	while (el) {
+		el.matches = el.matches || el.webkitMatchesSelector || el.msMatchesSelector;
 		if (el.matches(selector)) {
 			return el;
 		} else {
