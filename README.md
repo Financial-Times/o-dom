@@ -1,4 +1,4 @@
-# o-dom [![Build Status](https://circleci.com/gh/Financial-Times/o-dom.png?style=shield&circle-token=6ec89d992032f3ccbe4a85e6e5359857bf732502)](https://circleci.com/gh/Financial-Times/o-dom)
+# o-dom [![Build Status](https://circleci.com/gh/Financial-Times/o-dom.png?style=shield&circle-token=6ec89d992032f3ccbe4a85e6e5359857bf732502)](https://circleci.com/gh/Financial-Times/o-dom) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](#licence)
 
 Origami DOM manipulation &amp; traversal helpers.
 
