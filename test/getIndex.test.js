@@ -2,8 +2,8 @@
 
 import proclaim from 'proclaim';
 
-const sandbox = require('./helpers/sandbox');
-const dom = require('./../main');
+import sandbox from './helpers/sandbox';
+import dom from './../main';
 
 describe("getIndex()", function() {
 

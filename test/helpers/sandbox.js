@@ -22,6 +22,6 @@ function setContents(html) {
 	sandboxEl.innerHTML = html;
 }
 
-exports.init = init;
-exports.reset = reset;
-exports.setContents = setContents;
+export {init};
+export {reset};
+export {setContents};

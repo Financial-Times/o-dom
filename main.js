@@ -24,5 +24,5 @@ function getIndex(el) {
 	}
 }
 
-exports.getClosestMatch = getClosestMatch;
-exports.getIndex = getIndex;
+export {getClosestMatch};
+export {getIndex};
