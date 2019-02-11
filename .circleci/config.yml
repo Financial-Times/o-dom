@@ -5,17 +5,14 @@ jobs:
       - image: circleci/node:10-browsers
     steps:
       - checkout
-      - run: echo "prefix=$HOME/.local" > ~/.npmrc
-      - run: export "PATH=$PATH:$HOME/.local/bin"
-      - run: npm i -g origami-build-tools@^7
-      - run: origami-build-tools install
-      - run: origami-build-tools demo --demo-filter pa11y --suppress-errors
-      - run: origami-build-tools verify
-      - run: origami-build-tools test
+      - run: npx origami-build-tools@^7 install
+      - run: npx origami-build-tools@^7 demo --demo-filter pa11y --suppress-errors
+      - run: npx origami-build-tools@^7 verify
+      - run: npx origami-build-tools@^7 test
       - run: git clean -fxd
       - run: npx occ build --semver 0.0.0
-      - run: origami-build-tools --ignore-bower install
-      - run: origami-build-tools --ignore-bower test
+      - run: npx origami-build-tools@^7 --ignore-bower install
+      - run: npx origami-build-tools@^7 --ignore-bower test
   publish:
     docker:
       - image: circleci/node:10
