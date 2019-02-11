@@ -13,7 +13,7 @@ jobs:
       - run: npx occ build --semver 0.0.0
       - run: npx origami-build-tools@^7 install --ignore-bower
       - run: npx origami-build-tools@^7 test --ignore-bower
-  publish:
+  publish_to_npm:
     docker:
       - image: circleci/node:10
     steps:
