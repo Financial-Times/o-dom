@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run: npx occ build --semver ${VERSION##v}
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-      - run: npm publish
+      - run: npm publish --dry-run
 workflows:
   version: 2
   test:
