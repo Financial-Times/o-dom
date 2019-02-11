@@ -18,7 +18,7 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
-      - run: npx occ build --semver ${VERSION##v}
+      - run: npx occ build --semver ${CIRCLE_TAG##v}
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
       - run: npm publish --dry-run
 workflows:
