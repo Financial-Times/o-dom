@@ -1,5 +1,7 @@
 # o-dom [![Build Status](https://circleci.com/gh/Financial-Times/o-dom.png?style=shield&circle-token=6ec89d992032f3ccbe4a85e6e5359857bf732502)](https://circleci.com/gh/Financial-Times/o-dom) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](#licence)
 
+_Deprecated: Use native methods instead, such as [Element.closest](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest), with [polyfills](https://polyfill.io/v3/) to support older browsers.
+
 Origami DOM manipulation &amp; traversal helpers.
 
 - [Usage](#usage)
